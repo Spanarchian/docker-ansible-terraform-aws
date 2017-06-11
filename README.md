@@ -46,10 +46,10 @@ Installing Terraform:
     
     *Commands to be typed from Scripts directory :*
    
-    *cd Scripts*
-    *terraform plan*
-    *terraform apply*
-    *terraform show*
+    *cd Scripts;*
+    *terraform plan;*
+    *terraform apply;*
+    *terraform show;*
     
  6. terraform show will give you required IPs of ec2 hosts created , take public_ip from each output and update in all hosts files as       required
  
