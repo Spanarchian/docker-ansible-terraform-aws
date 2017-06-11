@@ -43,12 +43,13 @@ Installing Terraform:
  
  5. Use script/template aws_ec2_creation_template.tf to create aws ec2 node using below command 
     https://www.terraform.io/intro/getting-started/build.html
-    Commands to be typed from Scripts directory :
+    
+    *Commands to be typed from Scripts directory :*
    
-    *cd Scripts
-    terraform plan
-    terraform apply
-    terraform show*
+    *cd Scripts*
+    *terraform plan*
+    *terraform apply*
+    *terraform show*
     
  6. terraform show will give you required IPs of ec2 hosts created , take public_ip from each output and update in all hosts files as       required
  
