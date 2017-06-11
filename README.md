@@ -1,7 +1,7 @@
 # docker-ansible-terraform-aws
 Deploying 2 Docker hello world applications in HA mode using nginx as LB and AWS as cloud provider and ansible as orchestrator and terraform for IaC
 
-**This Project will get you started with terraform , aws , ansible and  docker **
+**This Project will get you started with terraform , aws , ansible and  docker**
 
 **Step at Highlevel:**
 
@@ -84,26 +84,23 @@ Installing Terraform:
       http://{nginx_hostIp}}/ 
       
 14. Now login to nginx docker container and modify  file /etc/nginx/conf.d/default.conf
+    This server accepts all traffic to the port 80 and passes it to the upstream.
+    Notice that the upstream name and the proxy_pass need to match.
+    file should look like as present in scripts folder nginx.cong , just update IPs of host
    
      *sudo docker ps -a*
      
      *sudo docker exec -it <nginx_container_id> bash*
      
-     *echo "upstream servers {
+      *echo "upstream servers {
       server ${hello-world-app1-ip}:8080;
       server ${hello-world-app2-ip}:8081;
-      }
-
-      # This server accepts all traffic to the port 80 and passes it to the upstream.
-      # Notice that the upstream name and the proxy_pass need to match.
-
+      }    
       server {
       listen 80;
-
       location / {
       proxy_pass http://servers;
       }
-
       }”  > /etc/nginx/conf.d/default.conf *
 
 15. Now refresh webui in chrome browser and you must see diff container id for each refresh as shown in attached images
