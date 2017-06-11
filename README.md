@@ -5,14 +5,21 @@ Deploying 2 Docker hello world applications in HA mode using nginx as LB and AWS
 
 **Step at Highlevel:**
 
-Install Terraform ( downlaod https://www.terraform.io/downloads.html) 
-Configure terraform
-Create 3 aws Ec2 nodes using terraform 
-Install ansible on 1 aws ec2 node 
-using ansible install docker & any other prereq on all 3 hosts
-Deploy the https://hub.docker.com/r/tutum/hello-world/ service in HA  using Ansible
-Loadbalancer : aws ec2 -> nginx-host
-App Nodes 	 :  aws ec2->hello_world_host aws ec2->hello_world_host
+Install Terraform ( downlaod https://www.terraform.io/downloads.html) ;
+
+Configure terraform ;
+
+Create 3 aws Ec2 nodes using terraform  ;
+
+Install ansible on 1 aws ec2 node ;
+
+using ansible install docker & any other prereq on all 3 hosts ;
+
+Deploy the https://hub.docker.com/r/tutum/hello-world/ service in HA  using Ansible ;
+
+Loadbalancer : aws ec2 -> nginx-host ;
+
+App Nodes 	 :  aws ec2->hello_world_host aws ec2->hello_world_host ;
 
 **Prerequistes for this Project :**
 
